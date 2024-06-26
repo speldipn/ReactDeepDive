@@ -6,6 +6,11 @@ LAMP(Linux + Apache + MySQL + PHP)
 
 Douple Buffering
 
+### History 
+
+- BoltJS -> FBolt
+- Facebook spartan project
+
 ## JS
 
 == vs. Object.is
