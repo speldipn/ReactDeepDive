@@ -1,10 +1,10 @@
 # React Deep Dive
 
-LAMP(Linux + Apache + MySQL + PHP)
+- LAMP(Linux + Apache + MySQL + PHP)
 
 ### Performance optimizing
 
-Douple Buffering
+- Douple Buffering
 
 ### History 
 
