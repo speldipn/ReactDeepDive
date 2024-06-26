@@ -3,9 +3,11 @@
 LAMP(Linux + Apache + MySQL + PHP)
 
 ### Performance optimizing
+
 Douple Buffering
 
 ## JS
+
 == vs. Object.is
   - == (type casting)
   - Object.is (equal ===)
@@ -22,3 +24,33 @@ NaN === 0 / 0 // false
 Object.is(NaN, 0 / 0) // true
 ```
 
+### ES6
+
+function vs arrow function
+- Cannot be used as a constructor.
+- Arguments do not exist
+- Function bind this to global, but Arrow function bind this to parent
+
+
+### Immediately Invoked Function Expression
+
+```js
+  (function (a: number, b: number) {
+    console.log(`${a} ${b} called`);
+  })(10, 20);
+
+  ((a: number, b: number) => console.log(a, b))(10, 20);
+```
+
+### Higher Order Function
+
+- passing parameter
+- return function
+
+```js
+  const add = function(a) {
+    return function(b) {
+      return a + b;
+    }
+  }
+```
