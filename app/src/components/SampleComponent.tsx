@@ -15,8 +15,8 @@ export class ReactComponent extends Component<Props, State> {
   }
   
   private handleClick() {
-    // this.setState((prev) => ({ count: prev.count + 1 }))
-    this.setState({ count: 1 });
+    this.setState((prev) => ({ count: prev.count + 1 }))
+    // this.setState({ count: 1 });
   }
 
   componentDidMount(): void {
@@ -28,11 +28,11 @@ export class ReactComponent extends Component<Props, State> {
   }
 
   componentDidUpdate(prevProps: Readonly<Props>, prevState: Readonly<State>, snapshot?: any): void {
-    const { count } = prevState;
-    if(count > 2) {
-      return;
-    }
-    // console.log("did update", prevProps, prevState, snapshot);
+    // const { count } = prevState;
+    // if(count > 2) {
+    //   return;
+    // }
+    console.log("did update", prevProps, prevState, snapshot);
   }
 
   shouldComponentUpdate(nextProps: Readonly<Props>, nextState: Readonly<State>, nextContext: any): boolean {
@@ -44,13 +44,28 @@ export class ReactComponent extends Component<Props, State> {
     return true;
   }
 
+
+  static getDerivedStateFromProps(nextProps: Props, prevState, State) {
+    console.log("getDerivedStateFromProps");
+    return null;
+  }
+
+  getSnapshotBeforeUpdate(prevProps: Readonly<Props>, prevState: Readonly<State>) {
+    console.log("getSnapshotBeforeUpdate", this.state.count);
+    if(this.state.count > 2) {
+      // NOTE: passing to snapshot parameter of ComponentDidUpdate
+      return { name: 'neo', age: 37 };
+    }
+    return null;
+  }
+
   componentWillUnmount(): void {
-    console.log("will unmount");
+    // console.log("will unmount");
   }
 
   public render() {
     const { state: { count } } = this;
-    console.log("ReactComponent");
+    console.log("ReactComponent render()");
     return (
       <h1>
         ReactComponent:{count}{' '}
@@ -75,7 +90,7 @@ export class ReactPureCompoent extends React.PureComponent<Props, State> {
   }
 
   public render() {
-    console.log("ReactPureComponent", ++this.renderCounter);
+    console.log("ReactPureComponent render()", ++this.renderCounter);
 
     return(
       <h1>
