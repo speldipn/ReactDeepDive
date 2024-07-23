@@ -1,11 +1,14 @@
-import SampleComponent from "./components/SampleComponent.tsx";
+import { useState } from "react";
+import { CompareComponent } from "./components/SampleComponent.tsx";
 import Example from "./components/Example.tsx";
 
 function App() {
+  const [ visible, setVisible] = useState(true);
   return (
     <div>
       {/* <Example /> */}
-      <SampleComponent />
+      {/* <button onClick={() => setVisible(p => !p)}>Show</button> */}
+      {visible && <CompareComponent />}
     </div>
   );
 }
