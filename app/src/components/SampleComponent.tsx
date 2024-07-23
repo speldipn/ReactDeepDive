@@ -12,7 +12,6 @@ class SampleComponent extends Component<Props, State> {
     super(props);
     this.state = { count: 1 }
     this.handleClick = this.handleClick.bind(this);
-    // Test comment
   }
   
   private handleClick() {
