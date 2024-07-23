@@ -52,9 +52,9 @@ export class ReactComponent extends Component<Props, State> {
     const { state: { count } } = this;
     console.log("ReactComponent");
     return (
-      <h1 style={{border: '1px solid black'}}>
-        {count}
-        <button onClick={this.handleClick}>Increse</button>
+      <h1>
+        ReactComponent:{count}{' '}
+        <button onClick={this.handleClick}>+</button>
       </h1>
     )
   }
@@ -78,8 +78,8 @@ export class ReactPureCompoent extends React.PureComponent<Props, State> {
     console.log("ReactPureComponent", ++this.renderCounter);
 
     return(
-      <h1 style={{ border: '1px solid black' }}>
-        ReactPureComponet: {this.state.count}{' '}
+      <h1>
+        ReactPureComponent: {this.state.count}{' '}
         <button onClick={this.handleClick}>+</button>
       </h1>
     );
