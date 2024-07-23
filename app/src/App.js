@@ -1,8 +1,12 @@
+import SampleComponent from "./components/SampleComponent.tsx";
 import Example from "./components/Example.tsx";
 
 function App() {
   return (
-    <Example />
+    <div>
+      {/* <Example /> */}
+      <SampleComponent />
+    </div>
   );
 }
 
