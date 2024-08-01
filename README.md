@@ -18,7 +18,7 @@
 - == (type casting)
 - Object.is (equal ===)
 
-== vs. Object.is
+== Vs. Object.is
 
 ```js
 -0 === +0; // true
@@ -33,7 +33,7 @@ Object.is(NaN, 0 / 0); // true
 
 ### ES6
 
-function vs arrow function
+Function vs Arrow function
 
 - Cannot be used as a constructor.
 - Arguments do not exist
@@ -51,8 +51,8 @@ function vs arrow function
 
 ### Higher Order Function
 
-- passing parameter
-- return function
+- Passing parameter
+- Return function
 
 ```js
 const add = function (a) {
@@ -68,8 +68,8 @@ const add = function (a) {
 
 ### Event Loop
 
-- include one task queue
-- priority: micro taskQ(process, nextTick, Promises, queueMicroTask, MutationObserver) > taskQ(setTimeout, setInterval, setImmediate)
+- Include one task queue
+- Priority: micro taskQ(process, nextTick, Promises, queueMicroTask, MutationObserver) > taskQ(setTimeout, setInterval, setImmediate)
 
 ### JSX
 
@@ -78,3 +78,17 @@ const add = function (a) {
 - JSXChildren
 - JSXStrings
 
+### Renderding
+
+- Drawing ui to web browser
+- But in react, rendering is building DOM tree
+
+### React 18
+
+- Sychronous rendering
+
+### Memoization
+
+- React.memo
+- useMemo
+- useCallback
